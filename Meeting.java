@@ -6,7 +6,7 @@ import java.io.*;
 
 /* Name of the class has to be "Main" only if the class is public. */
 
-class Meeting
+class Ideone
 {
 	static int count;
 	static void swap(int x[],int y[],int size){
@@ -28,21 +28,29 @@ class Meeting
 	}
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		int size;
+	try{	int size;
 		Scanner scan=new Scanner(System.in);
 		size=scan.nextInt();
 	int S[]=new int[size];
 	int F[]=new int[size];
+	
 	for(int i=0;i<size;i++)
 	   S[i]=scan.nextInt();
 	for(int i=0;i<size;i++)
 	   F[i]=scan.nextInt();
-	   
+	  
 	   swap(S,F,size);
 	   for(int i=0;i<size-1;i++)
 	    	if(F[i+1]>F[i])
 	    	    ++count;
 	   System.out.println(count);
+	}
+	catch(Exception e){
+		 System.out.println("Invalid Input");
+	}
+	
+	   
+	   
 	   
 	}
 }
